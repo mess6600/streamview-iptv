@@ -6,7 +6,8 @@ plugins {
 
 android {
     namespace "com.example.tivimate_clone"
-    compileSdkVersion 34
+    compileSdk = 35
+    ndkVersion flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -19,21 +20,21 @@ android {
 
     defaultConfig {
         applicationId "com.example.tivimate_clone"
-        minSdkVersion 21
-        targetSdkVersion 34
-        versionCode 1
-        versionName "1.0.0"
+        minSdk = 21
+        targetSdk = 35
+        versionCode = 1
+        versionName = "1.0.0"
     }
 
     buildTypes {
         release {
-            signingConfig signingConfigs.debug
-            minifyEnabled false
-            shrinkResources false
+            signingConfig = signingConfigs.debug
+            minifyEnabled = false
+            shrinkResources = false
         }
     }
 }
 
 flutter {
-    source '../..'
+    source = '../..'
 }
